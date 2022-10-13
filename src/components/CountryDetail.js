@@ -1,6 +1,4 @@
 import React from "react";
-import CountriesContainer from "../containers/CountriesContainer";
-
 
 const CountryDetail = ({selectedCountry}) => {
     
@@ -9,6 +7,7 @@ const CountryDetail = ({selectedCountry}) => {
     return (
         <div className="detail">
             <h2>{selectedCountry.name.official}</h2>
+            <h3>{selectedCountry.capital}</h3>
         </div>
     )
 }
