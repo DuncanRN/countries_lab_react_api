@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import CountriesList from '../components/CountriesList';
+import CountryDetail from '../components/CountryDetail';
 
 const CountriesContainer = () => {
     const [countries, setCountries] = useState([]);
+    const [selectedCountry, setSelectedCountry] = useState(null);
 
     useEffect(() => {
         getCountries();
@@ -15,8 +17,14 @@ const CountriesContainer = () => {
         .then(countries => setCountries(countries))
     }
 
+    const onCountryClick = function(country){
+        // console.log("in the click");
+        setSelectedCountry(country);
+    }
+
     return(<div className="container">
-        <CountriesList countries={countries} />
+        <CountriesList countries={countries} onCountryClick={onCountryClick}/>
+        { selectedCountry ? <CountryDetail selectedCountry={selectedCountry} /> : null }
     </div>)
 
 }
