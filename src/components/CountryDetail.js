@@ -6,8 +6,10 @@ const CountryDetail = ({selectedCountry}) => {
 
     return (
         <div className="detail">
-            <h2>{selectedCountry.name.official}</h2>
-            <h3>{selectedCountry.capital}</h3>
+            <h2><b>Country: </b>{selectedCountry.name.official}</h2>
+            <h3><b>Capital: </b>{selectedCountry.capital}</h3>
+            <h3><b>Area: </b>{selectedCountry.area}km<sup>2</sup></h3>
+            <h3><b>Landlocked? </b>{selectedCountry.landlocked}</h3>
         </div>
     )
 }

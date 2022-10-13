@@ -14,9 +14,9 @@ const CountryItem = ({country, onCountryClick, onFavClick}) => {
     return (
         <>
         <li >
-            <div onClick={handleClick}>{country.name.official} </div>
-            : {country.population}
-            <button onClick={handleFavClick}>Add to Favorites</button>
+            <div className="country_name" onClick={handleClick}>{country.name.official} </div>
+            <div> &nbsp;  has a population of {country.population}. </div>
+            <button className="button" onClick={handleFavClick}>Add to Favorites</button>
         </li>
         </>
         

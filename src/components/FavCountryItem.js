@@ -7,10 +7,12 @@ const FavCountryItem = ({favCountry}) => {
     return (
         <>
         <li >
-            <div >COUNTRY!! 
+            <div >
+                <p className="detail">Country has been added to favourites! 
+                    It's accessible in the state.
+                    Open your dev tools to view!</p>
                 {/* {favCountry.name.official}  */}
-                
-                </div>
+            </div>
         </li>
         </>
         

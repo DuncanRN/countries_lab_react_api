@@ -6,9 +6,12 @@ function App() {
   return (
     <>
     <div className="App">
-      <h1>Countries</h1>
+      <h1 className="title">Countries</h1>
       <CountriesContainer />
     </div>
+    <footer className="footer">
+      &copy; Duncan & Cammy
+    </footer>
     </>
   );
 }
